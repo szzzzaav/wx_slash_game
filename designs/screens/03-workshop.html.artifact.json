@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "screens/03-workshop.html",
+  "entry": "screens/03-workshop.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-06-08T12:36:22.170Z",
+  "updatedAt": "2026-06-08T12:36:22.170Z",
+  "metadata": {
+    "inferred": true,
+    "reconciled": true
+  }
+}

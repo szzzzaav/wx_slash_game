@@ -1,0 +1,50 @@
+@use '../../theme/theme' as *;
+
+.render-host {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: $color-bg-base;
+}
+
+.render-host__canvas {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.render-host .cover-scene {
+  z-index: 1;
+  transition: opacity 180ms ease;
+}
+
+.render-host--status-playing .render-host__canvas {
+  opacity: 0.96;
+}
+
+.render-host--status-playing .cover-scene {
+  opacity: 0.22;
+}
+
+.render-host--status-error .render-host__canvas,
+.render-host--status-snapshot .render-host__canvas,
+.render-host--status-paused .render-host__canvas {
+  opacity: 0;
+}
+
+.render-host--status-error .cover-scene,
+.render-host--status-snapshot .cover-scene,
+.render-host--status-paused .cover-scene {
+  opacity: 1;
+}
+
+.render-host--snapshot .render-host__canvas,
+.render-host--neighbor .render-host__canvas {
+  opacity: 0;
+}

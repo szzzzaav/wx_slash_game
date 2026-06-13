@@ -1,0 +1,28 @@
+@use './theme/theme' as *;
+@use './styles/screen';
+
+page {
+  min-height: 100%;
+  color: $color-text-primary;
+  background: $color-bg-base;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
+}
+
+view,
+text,
+button,
+textarea,
+input {
+  box-sizing: border-box;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+button::after {
+  border: 0;
+}

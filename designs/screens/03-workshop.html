@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>刷游戏 · 创意工坊</title>
+  <link rel="stylesheet" href="../assets/app.css" />
+</head>
+<body data-page="workshop">
+  <main class="phone-stage">
+    <section class="phone-screen" data-od-id="workshop-screen" aria-label="Prompt 即游戏创意工坊">
+      <div class="status-bar"><span>20:28</span><span class="status-icons"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span>86%</span></span></div>
+      <div class="ps-symbols compact" aria-hidden="true"><i class="tri"></i><i class="circle"></i><i class="cross"></i><i class="square"></i></div>
+      <div class="page-top">
+        <div class="title-block"><strong>创意工坊</strong><span>Prompt 即游戏</span></div>
+        <button class="icon-btn" data-toast="草稿已保存" aria-label="保存草稿"><svg class="icon" viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5V4zM8 4v6h8"/></svg></button>
+      </div>
+      <div class="panel-scroll">
+        <article class="card glass ps-line prompt-box">
+          <textarea aria-label="游戏 Prompt">我想要一个天空城堡风格的解谜游戏，玩法是旋转平台找到出口</textarea>
+          <div class="prompt-actions"><span>自然语言描述即可</span><button class="btn btn-ghost" data-toast="已整理 prompt">优化</button></div>
+        </article>
+        <div class="section-title"><h2>模板</h2><span>选择一个基础玩法</span></div>
+        <div class="chip-grid">
+          <button class="chip active" data-template>解谜</button>
+          <button class="chip" data-template>平台跳跃</button>
+          <button class="chip" data-template>躲避</button>
+          <button class="chip" data-template>收集</button>
+          <button class="chip" data-template>推箱子</button>
+          <button class="chip" data-template>迷宫</button>
+        </div>
+        <div class="section-title"><h2>难度</h2><span data-difficulty-label>标准</span></div>
+        <div class="card slider-row">
+          <input class="range" data-difficulty type="range" min="1" max="5" value="3" aria-label="难度" />
+          <div class="tag-row" style="justify-content: space-between; margin: 0;"><span class="tag">入门</span><span class="tag">进阶</span><span class="tag">高压</span></div>
+        </div>
+        <div class="section-title"><h2>时长</h2><span>单局节奏</span></div>
+        <div class="segmented">
+          <button data-time>2 分钟</button><button class="active" data-time>4 分钟</button><button data-time>6 分钟</button>
+        </div>
+        <div class="section-title"><h2>颜色主题</h2><span>抽象封面感</span></div>
+        <div class="segmented">
+          <button class="active" data-theme>天空城</button><button data-theme>冷白</button><button data-theme>蓝光</button>
+        </div>
+        <div class="section-title"><h2>特殊元素</h2><span>可开关</span></div>
+        <div class="toggle-row">
+          <button class="toggle-item" data-switch><span>旋转平台</span><span class="switch active"><i></i></span></button>
+          <button class="toggle-item" data-switch><span>隐藏出口</span><span class="switch active"><i></i></span></button>
+          <button class="toggle-item" data-switch><span>限时星尘</span><span class="switch"><i></i></span></button>
+        </div>
+        <button class="btn btn-primary" data-generate style="width: 100%; margin-top: 18px;">生成游戏</button>
+      </div>
+      <nav class="bottom-nav" aria-label="底部导航">
+        <a class="nav-item" href="01-feed.html"><svg class="icon" viewBox="0 0 24 24"><path d="M4 12h16M12 4v16"/></svg><span>刷</span></a>
+        <a class="nav-item active" href="03-workshop.html"><svg class="icon" viewBox="0 0 24 24"><path d="M5 19 19 5M14 5h5v5"/></svg><span>创作</span></a>
+        <a class="nav-item" href="04-generating.html"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1-9 9"/></svg><span>生成</span></a>
+        <a class="nav-item" href="05-profile.html"><svg class="icon" viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"/></svg><span>我的</span></a>
+      </nav>
+    </section>
+  </main>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

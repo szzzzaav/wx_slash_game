@@ -1,0 +1,115 @@
+@use '../../theme/theme' as *;
+
+.ui-button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 18px;
+  border-radius: $radius-pill;
+  color: $color-text-primary;
+  background: $color-bg-warm;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ui-button--primary {
+  @include purple-cta;
+}
+
+.ui-button--ghost {
+  background: rgba(31, 31, 31, 0.66);
+}
+
+.ui-button--outline {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: transparent;
+}
+
+.ui-button--block {
+  width: 100%;
+}
+
+.ui-tag {
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 9px;
+  border-radius: $radius-pill;
+  color: $color-text-secondary;
+  background: rgba(31, 31, 31, 0.82);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ui-tag--ai {
+  color: $color-purple-mid;
+}
+
+.ui-tag--ps {
+  color: $color-electric-blue;
+  background: rgba(83, 157, 245, 0.12);
+}
+
+.mini-avatar {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $color-bg-warm, #263b61);
+  box-shadow: inset 0 0 0 1px $color-line-soft;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 22px 2px 10px;
+}
+
+.section-title__heading {
+  color: $color-text-primary;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.section-title__meta {
+  color: $color-text-muted;
+  font-size: 12px;
+}
+
+.glass-card {
+  @include glass-panel;
+
+  position: relative;
+  overflow: hidden;
+  padding: 16px;
+  border-radius: 18px;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, $color-electric-blue, transparent);
+  opacity: 0.8;
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  right: -54px;
+  top: -36px;
+  width: 148px;
+  height: 92px;
+  border-radius: 0 0 0 $radius-pill;
+  border-left: 1px solid rgba(83, 157, 245, 0.54);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  opacity: 0.64;
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "screens/01-feed.html",
+  "entry": "screens/01-feed.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-06-08T12:35:27.932Z",
+  "updatedAt": "2026-06-08T12:35:27.932Z",
+  "metadata": {
+    "inferred": true,
+    "reconciled": true
+  }
+}

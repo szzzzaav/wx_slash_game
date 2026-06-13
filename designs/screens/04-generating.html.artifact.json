@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "screens/04-generating.html",
+  "entry": "screens/04-generating.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-06-08T12:37:47.295Z",
+  "updatedAt": "2026-06-08T12:37:47.295Z",
+  "metadata": {
+    "inferred": true,
+    "reconciled": true
+  }
+}

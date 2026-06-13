@@ -1,0 +1,159 @@
+@use '../../theme/theme' as *;
+
+.cover-scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 76% 20%, rgba(83, 157, 245, 0.34), transparent 34%),
+    radial-gradient(circle at 42% 18%, rgba(166, 77, 255, 0.16), transparent 28%),
+    linear-gradient(145deg, #1b263e, $color-bg-base 58%);
+}
+
+.cover-scene--variant-1 {
+  background:
+    radial-gradient(circle at 72% 18%, rgba(240, 93, 255, 0.28), transparent 34%),
+    radial-gradient(circle at 36% 12%, rgba(255, 164, 43, 0.14), transparent 26%),
+    linear-gradient(145deg, #211832, $color-bg-base 58%);
+}
+
+.cover-scene--variant-2 {
+  background:
+    radial-gradient(circle at 72% 18%, rgba(83, 157, 245, 0.3), transparent 34%),
+    radial-gradient(circle at 30% 14%, rgba(243, 114, 127, 0.18), transparent 28%),
+    linear-gradient(145deg, #152031, $color-bg-base 60%);
+}
+
+.cover-scene::before,
+.cover-scene::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+
+.cover-scene::before {
+  width: 242px;
+  height: 92px;
+  right: -84px;
+  top: 286px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-left-color: rgba(83, 157, 245, 0.62);
+  border-radius: 999px 0 0 999px;
+  transform: rotate(-13deg);
+  opacity: 0.72;
+}
+
+.cover-scene::after {
+  left: -26px;
+  right: 18px;
+  bottom: 136px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(83, 157, 245, 0.82), transparent 68%);
+  opacity: 0.72;
+}
+
+.cover-scene__island {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  left: 70px;
+  top: 208px;
+  transform: rotateX(58deg) rotateZ(45deg);
+  transform-style: preserve-3d;
+  animation: cover-scene-float 4.8s ease-in-out infinite;
+}
+
+.cover-scene--compact .cover-scene__island {
+  left: 70px;
+  top: 0;
+  transform: scale(0.58) rotateX(58deg) rotateZ(45deg);
+}
+
+.cover-scene__tile,
+.cover-scene__tower,
+.cover-scene__bridge,
+.cover-scene__portal,
+.cover-scene__character {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.36);
+}
+
+.cover-scene__tile {
+  width: 78px;
+  height: 78px;
+  border-radius: 12px;
+}
+
+.cover-scene__tile--a {
+  left: 10px;
+  top: 84px;
+  background: #d8dbe6;
+}
+
+.cover-scene__tile--b {
+  left: 82px;
+  top: 50px;
+  background: #d8c4ff;
+}
+
+.cover-scene__tile--c {
+  left: 152px;
+  top: 88px;
+  background: #cfe6ff;
+}
+
+.cover-scene__tile--d {
+  left: 86px;
+  top: 124px;
+  background: #b9d2ff;
+}
+
+.cover-scene__tower {
+  width: 44px;
+  height: 92px;
+  left: 96px;
+  top: 8px;
+  border-radius: 14px 14px 8px 8px;
+  background: #dfe5ff;
+  transform: translateZ(42px);
+}
+
+.cover-scene__bridge {
+  width: 132px;
+  height: 24px;
+  left: 50px;
+  top: 116px;
+  border-radius: $radius-pill;
+  background: #b9bac4;
+}
+
+.cover-scene__portal {
+  width: 40px;
+  height: 52px;
+  left: 168px;
+  top: 64px;
+  border-radius: 50% 50% 12px 12px;
+  background: $color-electric-blue;
+}
+
+.cover-scene__character {
+  width: 18px;
+  height: 28px;
+  left: 56px;
+  top: 66px;
+  border-radius: $radius-pill;
+  background: $color-purple-mid;
+  box-shadow: 0 0 18px rgba(166, 77, 255, 0.72);
+}
+
+@keyframes cover-scene-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -10px;
+  }
+}

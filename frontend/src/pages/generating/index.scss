@@ -1,0 +1,119 @@
+@use '../../theme/theme' as *;
+
+.progress-orb {
+  position: relative;
+  width: 186px;
+  height: 186px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 18px auto 20px;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.progress-orb__inner {
+  width: 162px;
+  height: 162px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: $color-bg-elevated;
+}
+
+.progress-orb__percent {
+  color: $color-text-primary;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.progress-orb__meta {
+  margin-top: 4px;
+  color: $color-text-muted;
+  font-size: 12px;
+}
+
+.preview-mini {
+  position: relative;
+  height: 154px;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.generating-page__summary {
+  margin-top: 12px;
+}
+
+.generating-page__game-title {
+  font-size: 20px;
+}
+
+.generating-page__copy {
+  display: block;
+  margin-top: 8px;
+  color: $color-text-muted;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.steps {
+  display: grid;
+  gap: 8px;
+}
+
+.step {
+  min-height: 52px;
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 14px;
+  background: $color-bg-warm;
+}
+
+.step__index {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: $color-bg-base;
+  background: $color-text-muted;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.step--done .step__index,
+.step--active .step__index {
+  color: $color-text-primary;
+  background: linear-gradient(135deg, $color-purple-start, $color-purple-end);
+}
+
+.step--active {
+  box-shadow: inset 0 0 0 1px rgba(83, 157, 245, 0.7);
+}
+
+.step__title {
+  display: block;
+  color: $color-text-primary;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.step__desc {
+  display: block;
+  margin-top: 3px;
+  color: $color-text-muted;
+  font-size: 11px;
+}
+
+.generating-page__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}

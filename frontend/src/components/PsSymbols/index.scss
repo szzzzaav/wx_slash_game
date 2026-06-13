@@ -1,0 +1,103 @@
+@use '../../theme/theme' as *;
+
+.ps-symbols {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.ps-symbols__tri {
+  position: absolute;
+  right: 42px;
+  top: 96px;
+  width: 0;
+  height: 0;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-bottom: 29px solid $color-text-primary;
+}
+
+.ps-symbols__circle {
+  position: absolute;
+  right: -22px;
+  top: 154px;
+  width: 76px;
+  height: 76px;
+  border: 14px solid $color-electric-blue;
+  border-radius: 50%;
+}
+
+.ps-symbols__cross {
+  position: absolute;
+  left: 26px;
+  top: 156px;
+  width: 30px;
+  height: 30px;
+  color: $color-text-muted;
+  transform: rotate(45deg);
+}
+
+.ps-symbols__cross::before,
+.ps-symbols__cross::after {
+  content: '';
+  position: absolute;
+  border-radius: $radius-pill;
+  background: currentColor;
+}
+
+.ps-symbols__cross::before {
+  left: 13px;
+  top: 0;
+  width: 5px;
+  height: 30px;
+}
+
+.ps-symbols__cross::after {
+  left: 0;
+  top: 13px;
+  width: 30px;
+  height: 5px;
+}
+
+.ps-symbols__square {
+  position: absolute;
+  left: 34px;
+  bottom: 202px;
+  width: 30px;
+  height: 30px;
+  border: 7px solid $color-text-primary;
+  transform: rotate(-8deg);
+}
+
+.ps-symbols--compact {
+  opacity: 0.14;
+}
+
+.ps-symbols--compact .ps-symbols__tri {
+  top: 86px;
+  right: 26px;
+  transform: scale(0.72);
+}
+
+.ps-symbols--compact .ps-symbols__circle {
+  top: 126px;
+  right: -42px;
+  transform: scale(0.62);
+}
+
+.ps-symbols--compact .ps-symbols__cross {
+  top: auto;
+  bottom: 132px;
+  left: 24px;
+  transform: scale(0.7) rotate(45deg);
+}
+
+.ps-symbols--compact .ps-symbols__square {
+  right: 48px;
+  bottom: 82px;
+  left: auto;
+  transform: scale(0.7) rotate(-8deg);
+}

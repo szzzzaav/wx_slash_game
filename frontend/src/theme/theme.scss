@@ -1,0 +1,39 @@
+$color-bg-base: #121212;
+$color-bg-deep: #050613;
+$color-bg-elevated: #181818;
+$color-bg-warm: #1f1f1f;
+$color-bg-glass: rgba(24, 24, 24, 0.84);
+$color-text-primary: #ffffff;
+$color-text-secondary: #cbcbcb;
+$color-text-muted: #8f8f9c;
+$color-line-soft: rgba(255, 255, 255, 0.1);
+$color-accent-green: #1ed760;
+$color-accent-green-hover: #1db954;
+$color-purple-start: #7a3cff;
+$color-purple-mid: #a64dff;
+$color-purple-end: #f05dff;
+$color-electric-blue: #539df5;
+$color-warn: #ffa42b;
+$color-danger: #f3727f;
+
+$radius-sm: 8px;
+$radius-md: 16px;
+$radius-lg: 24px;
+$radius-pill: 999px;
+
+@mixin glass-panel {
+  border: 1px solid $color-line-soft;
+  background: $color-bg-glass;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+@mixin purple-cta {
+  color: $color-text-primary;
+  background: linear-gradient(135deg, $color-purple-start 0%, $color-purple-mid 48%, $color-purple-end 100%);
+  box-shadow: 0 12px 36px rgba(122, 60, 255, 0.28);
+}
+
+@mixin blue-line {
+  background: linear-gradient(90deg, transparent, $color-electric-blue, transparent);
+}

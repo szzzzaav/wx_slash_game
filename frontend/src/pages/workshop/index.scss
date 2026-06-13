@@ -1,0 +1,128 @@
+@use '../../theme/theme' as *;
+
+.prompt-box__input {
+  width: 100%;
+  min-height: 142px;
+  color: $color-text-primary;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.prompt-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $color-text-muted;
+  font-size: 12px;
+}
+
+.chip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.chip {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-pill;
+  color: $color-text-secondary;
+  background: $color-bg-warm;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.chip--active {
+  color: $color-text-primary;
+  background: linear-gradient(135deg, $color-purple-start, $color-purple-end);
+}
+
+.slider-row {
+  display: grid;
+  gap: 10px;
+  padding: 14px 10px;
+  border-radius: 18px;
+  background: $color-bg-elevated;
+}
+
+.difficulty-tags {
+  display: flex;
+  justify-content: space-between;
+  color: $color-text-muted;
+  font-size: 11px;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  padding: 5px;
+  border-radius: $radius-pill;
+  background: $color-bg-warm;
+}
+
+.segmented__item {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-pill;
+  color: $color-text-muted;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.segmented__item--active {
+  color: $color-text-primary;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.toggle-row {
+  display: grid;
+  gap: 8px;
+}
+
+.toggle-item {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  border-radius: 14px;
+  background: $color-bg-warm;
+  color: $color-text-primary;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.switch {
+  width: 44px;
+  height: 26px;
+  padding: 3px;
+  border-radius: $radius-pill;
+  background: #4d4d4d;
+}
+
+.switch__knob {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: $color-text-primary;
+  transition: transform 200ms ease;
+}
+
+.switch--active {
+  background: linear-gradient(135deg, $color-purple-start, $color-purple-end);
+}
+
+.switch--active .switch__knob {
+  transform: translateX(18px);
+}
+
+.workshop-page__generate {
+  margin-top: 18px;
+}

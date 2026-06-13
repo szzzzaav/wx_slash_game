@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "wx_slash_games/designs/shua-youxi-mobile-ui.html",
+  "entry": "wx_slash_games/designs/shua-youxi-mobile-ui.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-06-10T03:36:16.746Z",
+  "updatedAt": "2026-06-10T03:36:16.746Z",
+  "metadata": {
+    "inferred": true,
+    "reconciled": true
+  }
+}
