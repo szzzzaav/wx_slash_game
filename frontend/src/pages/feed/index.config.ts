@@ -1,3 +1,4 @@
 export default definePageConfig({
-  navigationBarTitleText: '刷游戏'
+  navigationBarTitleText: '',
+  navigationStyle: 'custom'
 })

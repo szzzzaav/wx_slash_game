@@ -1,15 +1,17 @@
 import Taro from '@tarojs/taro'
-import { CoverView } from '@tarojs/components'
+import { View, Text } from '@tarojs/components'
+
+import { SvgIcon, ICON_NAV_FEED, ICON_NAV_WORKSHOP, ICON_NAV_GENERATE, ICON_NAV_PROFILE } from '../Icons'
 
 import './index.scss'
 
 type NavKey = 'feed' | 'workshop' | 'generating' | 'profile'
 
-const navItems: Array<{ key: NavKey; label: string; mark: string; path: string }> = [
-  { key: 'feed', label: '刷', mark: '+', path: '/pages/feed/index' },
-  { key: 'workshop', label: '创作', mark: '↗', path: '/pages/workshop/index' },
-  { key: 'generating', label: '生成', mark: '○', path: '/pages/generating/index' },
-  { key: 'profile', label: '我的', mark: '⌾', path: '/pages/profile/index' }
+const navItems: Array<{ key: NavKey; label: string; iconSrc: string; path: string }> = [
+  { key: 'feed', label: '刷', iconSrc: ICON_NAV_FEED, path: '/pages/feed/index' },
+  { key: 'workshop', label: '创作', iconSrc: ICON_NAV_WORKSHOP, path: '/pages/workshop/index' },
+  { key: 'generating', label: '生成', iconSrc: ICON_NAV_GENERATE, path: '/pages/generating/index' },
+  { key: 'profile', label: '我的', iconSrc: ICON_NAV_PROFILE, path: '/pages/profile/index' }
 ]
 
 interface BottomNavProps {
@@ -18,17 +20,17 @@ interface BottomNavProps {
 
 export function BottomNav({ active }: BottomNavProps) {
   return (
-    <CoverView className='bottom-nav'>
+    <View className='bottom-nav'>
       {navItems.map(item => (
-        <CoverView
+        <View
           key={item.key}
           className={`bottom-nav__item${active === item.key ? ' bottom-nav__item--active' : ''}`}
           onClick={() => active !== item.key && Taro.redirectTo({ url: item.path })}
         >
-          <CoverView className='bottom-nav__icon'>{item.mark}</CoverView>
-          <CoverView className='bottom-nav__label'>{item.label}</CoverView>
-        </CoverView>
+          <SvgIcon src={item.iconSrc} size={48} />
+          <Text className='bottom-nav__label'>{item.label}</Text>
+        </View>
       ))}
-    </CoverView>
+    </View>
   )
 }
